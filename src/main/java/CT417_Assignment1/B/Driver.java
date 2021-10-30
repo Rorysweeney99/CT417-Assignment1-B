@@ -12,11 +12,7 @@ import CT417_Assignment1.Student;
 
 public class Driver {
 	private static DateTimeFormatter dtf = DateTimeFormat.forPattern("dd/MM/yyyy");
-	//creating a handful of fictional students with mock data, 
-	//adding the students to a number of modules and adding a number of modules to a course.  
-	//Further on, the program should print out a list of all the courses, their respective modules, 
-	//and all students, their usernames, assigned modules and the course(s) they are registered 
-	//for to the console
+	
 	public static void main(String[] args){
 	// Student Creation
 	Student student1 = new Student("John Lennon", 81, dtf.parseDateTime("09/10/1940"), 10000000);
@@ -45,7 +41,7 @@ public class Driver {
 		} 
 	};
 	
-	//Module Creation
+	// Module Creation
 	Module module1 = new Module("Computer Science","CS100");
 	Module module2 = new Module("Statistics","CS101");
 	Module module3 = new Module("Data Analysis","CS102");
@@ -62,7 +58,7 @@ public class Driver {
 		} 
 	};
 	
-	//Course Creation
+	// Course Creation
 	Course course1 = new Course("CSIT", dtf.parseDateTime("01/09/2018"), dtf.parseDateTime("07/05/2022"));
 	Course course2 = new Course("ECE", dtf.parseDateTime("01/09/2018"), dtf.parseDateTime("07/05/2022"));
 	
@@ -106,7 +102,7 @@ public class Driver {
     course2.addModule(module4);
     course2.addModule(module5);
     
-    //list of all the courses, their respective modules
+    // List of all the courses, their respective modules
     System.out.println("Courses List -");
     System.out.println(course1.toString());
     System.out.println(course1.getName()+ " - All Related Modules: \n"+course1.getModules().toString()+"\n");
@@ -114,7 +110,7 @@ public class Driver {
     System.out.println(course2.toString());
     System.out.println(course2.getName()+ " - All Related Modules: \n"+course2.getModules().toString()+"\n");
     
-    //all students, their usernames, assigned modules and the course(s) they are registered
+    // All students, their usernames, assigned modules and the course(s) they are registered
     System.out.println("Student List -");
     for(Student s : studentList) {
     	System.out.println(s.toString());
